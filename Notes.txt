@@ -1,0 +1,6 @@
+Virtual Hard Drive Challenge
+
+- ATM project requires minimum software requirement of Windows 7 
+- Licensing issues - Windows 7 
+  - resolved by visiting https://my.visualstudio.com/Downloads?q=Windows%207
+  - Sign in with UniSA account
