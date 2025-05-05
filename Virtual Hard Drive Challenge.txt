@@ -1,0 +1,13 @@
+Virtual Hard Drive Challenge
+15/4/25
+- ATM project requires minimum software requirement of Windows 7 
+- Licensing issues - Windows 11 
+    - Used unlicensed version of Windows 11. 
+    - Trial period applies and a product key can put added to the OS at a later date.
+
+16/4/25
+- Stop unnecessary services on Windows.
+- Download Install Guide - https://github.com/mattlong7/ATM-Kiosk-System/blob/master/documentation/Modern%20Bank%20Kiosk%2C%20System%20Design%20Document.pdf
+- Setup ATM Open-Source Project
+- Download Visual Studio Community Edition
+- Install project dependencies (.NETFramework, SQLite, Nuget packages)

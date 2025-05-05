@@ -131,43 +131,19 @@
             this.cmbCounty.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Italic);
             this.cmbCounty.FormattingEnabled = true;
             this.cmbCounty.Items.AddRange(new object[] {
-            "Antrim",
-            "Armagh",
-            "Carlow",
-            "Cavan",
-            "Clare",
-            "Cork",
-            "Derry",
-            "Donegal",
-            "Down",
-            "Dublin",
-            "Fermanagh",
-            "Galway",
-            "Kerry",
-            "Kildare",
-            "Kilkenny",
-            "Laois",
-            "Leitrim",
-            "Limerick",
-            "Longford",
-            "Louth",
-            "Mayo",
-            "Meath",
-            "Monaghan",
-            "Offaly",
-            "Roscommon",
-            "Sligo",
-            "Tipperary",
-            "Tyrone",
-            "Waterford",
-            "Westmeath",
-            "Wexford",
-            "Wicklow"});
+            "Australian Capital Territory",
+            "New South Wales",
+            "Northan Territory",
+            "Queensland",
+            "South Australia",
+            "Tasmania",
+            "Victoria",
+            "Western Australia"});
             this.cmbCounty.Location = new System.Drawing.Point(632, 382);
             this.cmbCounty.Name = "cmbCounty";
             this.cmbCounty.Size = new System.Drawing.Size(321, 48);
             this.cmbCounty.TabIndex = 8;
-            this.ModernBankTooltip3.SetToolTip(this.cmbCounty, "Registered County of Residence");
+            this.ModernBankTooltip3.SetToolTip(this.cmbCounty, "Registered State of Residence");
             this.cmbCounty.SelectedIndexChanged += new System.EventHandler(this.cmbCounty_SelectedIndexChanged);
             // 
             // txtPostcode
@@ -214,7 +190,7 @@
             this.lblCounty.Name = "lblCounty";
             this.lblCounty.Size = new System.Drawing.Size(93, 29);
             this.lblCounty.TabIndex = 75;
-            this.lblCounty.Text = "County";
+            this.lblCounty.Text = "State";
             // 
             // lblCity
             // 

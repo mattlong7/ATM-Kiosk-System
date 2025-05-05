@@ -73,7 +73,7 @@ namespace ATM_Kiosk_System
             cmbCounty.Text = myLoggedinBankAcount.county; 
             txtPostcode.Text = myLoggedinBankAcount.postcode;
             lblAccountNumber.Text = "Account Number: " + myLoggedinBankAcount.accountnumber;
-            lblBalance.Text = "Balance: " + "€" + myLoggedinBankAcount.balance;
+            lblBalance.Text = "Balance: " + "$" + myLoggedinBankAcount.balance;
             lblPin.Text = "Pin: " + myLoggedinBankAcount.accountpin;
 
             //Set Panel to Center of Screen - Fullscreen centered
@@ -137,7 +137,7 @@ namespace ATM_Kiosk_System
             if (cmbCounty.Text == "")
             {
                
-                warningErrorMessage += "You must enter a County" + Environment.NewLine;
+                warningErrorMessage += "You must enter a State" + Environment.NewLine;
                 cmbCounty.BackColor = System.Drawing.ColorTranslator.FromHtml("#ccccff");
             }
             //6. GENDER
@@ -145,7 +145,7 @@ namespace ATM_Kiosk_System
             {
               
   
-                warningErrorMessage += "You must enter a county";
+                warningErrorMessage += "You must enter a State";
                 txtPostcode.BackColor = System.Drawing.ColorTranslator.FromHtml("#ccccff");
             }
 
