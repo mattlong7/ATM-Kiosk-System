@@ -41,7 +41,7 @@ namespace ATM_Kiosk_System
             
 
             lblAccountNumber.Text = "Account Number: " + myLoggedinBankAcount.accountnumber;
-            lblBalance.Text = "Balance: " + "€" + myLoggedinBankAcount.balance;
+            lblBalance.Text = "Balance: " + "$" + myLoggedinBankAcount.balance;
 
         
 

@@ -20,7 +20,7 @@ namespace ATM_Kiosk_System
         int MainTimer = 60;
         int SessionTmer = 30;
         static int DefaultTimer = 60;
-        static string myFiletoOpen = Application.StartupPath + "\\BankData.db";
+        static string myFiletoOpen = "C:\\Data\\BankData.db";
 
         public ATMconnector myATMconnector = new ATMconnector(myFiletoOpen);
         public BankAccount myBankAccount = new BankAccount();

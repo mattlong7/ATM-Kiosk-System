@@ -18,9 +18,9 @@ namespace ATM_Kiosk_System
         public bool ConnectedOrNot = false;
         public string FileFailed;
         //static string myDataSource = @"Data Source = C:\\data\\BankData.db";
-        static string myDataSource = "DATA SOURCE=" + Application.StartupPath +"\\BankData.db";
+        //static string myDataSource = "DATA SOURCE=" + "C:\\Data\\BankData.db";
         //SQL DATA CONNECTION TO THE SQLITEDATABASE USING THE SQLCONNECTION COMPONENT
-        public SQLiteConnection ModernBankDBConn = new SQLiteConnection(myDataSource);
+        public SQLiteConnection ModernBankDBConn;
         public DataSet ModernBankDataSet = new DataSet();
 
         //SQL ADAPTER
@@ -49,25 +49,56 @@ namespace ATM_Kiosk_System
         }
 
 
-        public ATMconnector(string myDatabaseFile)
+        //        public ATMconnector(string myDatabaseFile)
+        //        {
+        //            if (File.Exists(myDatabaseFile))
+        //            {
+        //                myDataSource += myDatabaseFile;
+        //                ConnectedOrNot = true;
+        //            }
+        //            else
+        //            {
+        //                FileFailed = myDatabaseFile;
+
+
+
+        /*MessageBox.Show("This program could not load the required database file. The database file should be " +
+         "located in the path = "+ myDatabaseFile  + " Please locate the file and try again.", "WARNING - Missing File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+         //CLOSES THE ENTIRE PROGRAM IF THERE IS NO DATABASE FILE
+         Environment.Exit(0);*/
+        //            }
+        //        }
+
+        public ATMconnector(string myDatabaseFile = null)
         {
-            if (File.Exists(myDatabaseFile))
+            string dbPath = "C:\\Data\\BankData.db"; // default
+
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Any(arg => arg.Equals("-shadowdb", StringComparison.OrdinalIgnoreCase)))
             {
-                myDataSource += myDatabaseFile;
+                dbPath = "C:\\Users\\shadowbet\\AppData\\Local\\ShadowBetATMdb\\BankData.db";
+            }
+            else if (!string.IsNullOrWhiteSpace(myDatabaseFile))
+            {
+                dbPath = myDatabaseFile;
+            }
+
+            if (File.Exists(dbPath))
+            {
+                string myDataSource = "Data Source=" + dbPath;
+                ModernBankDBConn = new SQLiteConnection(myDataSource);
                 ConnectedOrNot = true;
             }
             else
             {
-                FileFailed = myDatabaseFile;
-
-
-                
-               /*MessageBox.Show("This program could not load the required database file. The database file should be " +
-                "located in the path = "+ myDatabaseFile  + " Please locate the file and try again.", "WARNING - Missing File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //CLOSES THE ENTIRE PROGRAM IF THERE IS NO DATABASE FILE
-                Environment.Exit(0);*/
+                FileFailed = dbPath;
+                MessageBox.Show("Could not find database at: " + dbPath, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(0);
             }
         }
+
+
+
         public void FetchOtherAccountHolder(BankAccount myLoggedBankUser)
         {
 

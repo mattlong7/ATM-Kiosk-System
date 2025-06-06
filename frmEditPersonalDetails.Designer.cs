@@ -190,7 +190,7 @@
             this.lblCounty.Name = "lblCounty";
             this.lblCounty.Size = new System.Drawing.Size(93, 29);
             this.lblCounty.TabIndex = 75;
-            this.lblCounty.Text = "State";
+            this.lblCounty.Text = " State";
             // 
             // lblCity
             // 

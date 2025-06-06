@@ -60,7 +60,7 @@ namespace ATM_Kiosk_System
             pnlCheckBalance.Left = (this.ClientSize.Width - pnlCheckBalance.Size.Width) / 2;
             myATMconnector.FetchBalance(myLoggedinBankAcount);
 
-            txtInput.Text = "€" +myLoggedinBankAcount.balance;
+            txtInput.Text = "$" +myLoggedinBankAcount.balance;
             
 
 
